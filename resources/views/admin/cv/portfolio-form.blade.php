@@ -1,0 +1,5 @@
+<div class="mb-3"><label class="form-label">Judul portfolio</label><input class="form-control" name="judul" required value="{{ old('judul', $portfolio->judul ?? '') }}"></div>
+<div class="mb-3"><label class="form-label">Deskripsi</label><textarea class="form-control" name="deskripsi" rows="3">{{ old('deskripsi', $portfolio->deskripsi ?? '') }}</textarea></div>
+<div class="mb-3"><label class="form-label">Poin penting <small>(satu per baris)</small></label><textarea class="form-control" name="poin" rows="4">{{ old('poin', $portfolio->poin ?? '') }}</textarea></div>
+<div class="mb-3"><label class="form-label">Gambar (opsional, maksimal 2MB)</label><input type="file" class="form-control" name="gambar" accept="image/*"></div>
+<div class="form-check mb-3"><input class="form-check-input" type="checkbox" name="tampilkan_gambar" value="1" id="tampilkan_gambar" @checked(old('tampilkan_gambar', $portfolio->tampilkan_gambar ?? true))><label class="form-check-label" for="tampilkan_gambar">Tampilkan gambar pada CV</label></div>
